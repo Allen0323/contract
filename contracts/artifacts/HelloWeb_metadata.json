@@ -93,7 +93,23 @@
 			{
 				"inputs": [],
 				"name": "returnValue",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_bool2",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[3]",
+						"name": "_array",
+						"type": "uint256[3]"
+					}
+				],
 				"stateMutability": "pure",
 				"type": "function"
 			}
@@ -126,11 +142,11 @@
 	},
 	"sources": {
 		"contracts/HelloWorld.sol": {
-			"keccak256": "0x5566e88ce255ec068b290daf29e1a24d50f6bc6b42cdbad857b7d25ed6e460cb",
+			"keccak256": "0x8c2bb418b13508508f73e409185611f46344e3d8aeb7b185a404a3e0187b1b63",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5951ae4ffa1e15ed3a4be235771f83ebf3e064b717bc2e090cb9254e589d01eb",
-				"dweb:/ipfs/QmacBig1g8rvmzmQCsraHo5kpDuc5rWSYMmrYK8wB7qXXa"
+				"bzz-raw://f70942eca5c6929539bbb3b0ea8701a4d1aedaddb796e79341c24e7a7c9cffe9",
+				"dweb:/ipfs/QmUnZ4timk3q7zhxcv9eqRsvKwXV4zurPuEfjE8T4XkipJ"
 			]
 		}
 	},

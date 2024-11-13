@@ -4,10 +4,12 @@ pragma solidity ^0.8.4;
 contract HelloWeb {
     uint256 public number = 5;
 
+    //add 合約變量
     function add() external {
         number = number + 1;
     }
 
+    //view 只能讀取合約變量 不能修改
     function addView(uint256 _number) public view returns (uint256 new_number) {
         new_number = _number + 1;
     }
@@ -39,10 +41,15 @@ contract HelloWeb {
         _array = [uint256(3), 2, 1];
     }
 
-    function returnValue() public pure    returns（）{
-        uint256 _number2;
-        bool _bool2;
-        uint256[3] memory _array;
+    function returnValue()
+        public
+        pure
+        returns (
+            uint256 _number2,
+            bool _bool2,
+            uint256[3] memory _array
+        )
+    {
         //view
         (_number2, _bool2, _array) = returnNamed();
     }
