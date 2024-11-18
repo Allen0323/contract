@@ -17,6 +17,32 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -24,7 +50,7 @@
 						"type": "address"
 					}
 				],
-				"name": "changeOwner",
+				"name": "changeOwner2",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -71,11 +97,11 @@
 	},
 	"sources": {
 		"contracts/Owner.sol": {
-			"keccak256": "0xb1dca0165b70244335c7172b21e568ab0209da0cd7f0453a782065c1c225e6ef",
+			"keccak256": "0x32c9269bd98f4ee4ca0e9907070e7105cd566e3a020cdd2cccf7c1bc334761af",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7c5e16a704242af22e052f2f5d841199a8cdd437349c37dfb61d011fdb9e01ed",
-				"dweb:/ipfs/QmTXdWYqJZ41MQM1yc1Lrhdskj2DiHcR1zD7px5R3dj8dB"
+				"bzz-raw://ceaa5aa97631fd96f7e8e762f5325f06fbb2b8005094c0779b8fe62c37eab8e0",
+				"dweb:/ipfs/QmQBgNj2jEn7gJtwCHSKekWczRMYLGxfQnUMuujwWt9Ast"
 			]
 		}
 	},
