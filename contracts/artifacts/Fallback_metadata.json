@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "Sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "Value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "Data",
+						"type": "bytes"
+					}
+				],
+				"name": "fallbackCalled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "Sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "Value",
+						"type": "uint256"
+					}
+				],
+				"name": "receivedCalled",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FallBack.sol": "Fallback"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/FallBack.sol": {
+			"keccak256": "0xcb21829fcde16ef268449f2e037ec706ffc4a3373047565f49c8b5de17414105",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e329e71fde4bf6c8f960a2438ddecf86adae44904f9da4327d3e275cd4e6681",
+				"dweb:/ipfs/QmTJGkAZg5dyZZzncKvyhUmifoEcQm5M9LwDYK2aM2CR6L"
+			]
+		}
+	},
+	"version": 1
+}
