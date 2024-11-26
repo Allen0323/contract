@@ -1,0 +1,142 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "Receiver",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "Amount",
+						"type": "uint256"
+					}
+				],
+				"name": "SendToken",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "amountAllowed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "t1",
+						"type": "address"
+					}
+				],
+				"name": "requestTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "requestedAddress",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ERC20/Faucet.sol": "Faucet"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ERC20/Faucet.sol": {
+			"keccak256": "0x0200bd37d41fbf483193fdd948dd0464841f0f1bdb31f036ea5ca404abe52f20",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://97e8327ee8b0e74107ce222d39c490d5e6dfc96b5203f896ac1e8e9f895429c2",
+				"dweb:/ipfs/QmZwEYVCd3F9wStRqHv27NDuvbzL51oVhH9neewdBDGKyC"
+			]
+		},
+		"contracts/ERC20/IERC20.sol": {
+			"keccak256": "0x70666f4c4cdbbebeb66d5849341b325bdc483fe93dfbc0abddf8d3cbe1bb694c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://443619be90011012cd151a64132517da8cffaa5501f804a3ef787abc9fa3aa7b",
+				"dweb:/ipfs/QmS5R1tGx8Fc5iaXugPm6cUqjU6fPDuSpJqH1KB4qiLaoY"
+			]
+		}
+	},
+	"version": 1
+}

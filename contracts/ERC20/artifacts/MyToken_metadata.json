@@ -8,14 +8,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "name_",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "symbol_",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "initialSupply",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -139,19 +134,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "burn",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -167,13 +149,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "a1",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "a2",
+						"type": "address"
+					}
+				],
+				"name": "getApproveUnit",
+				"outputs": [
+					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "a3",
 						"type": "uint256"
 					}
 				],
-				"name": "mint",
-				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -271,31 +264,8 @@
 			}
 		],
 		"devdoc": {
-			"events": {
-				"Approval(address,address,uint256)": {
-					"details": "释放条件：当 `value` 单位的货币从账户 (`owner`) 授权给另一账户 (`spender`)时."
-				},
-				"Transfer(address,address,uint256)": {
-					"details": "释放条件：当 `value` 单位的货币从账户 (`from`) 转账到另一账户 (`to`)时."
-				}
-			},
 			"kind": "dev",
-			"methods": {
-				"approve(address,uint256)": {
-					"details": "调用者账户给`spender`账户授权 `amount`数量代币。 如果成功，返回 `true`. 释放 {Approval} 事件."
-				}
-			},
-			"stateVariables": {
-				"allowance": {
-					"details": "返回`owner`账户授权给`spender`账户的额度，默认为0。 当{approve} 或 {transferFrom} 被调用时，`allowance`会改变."
-				},
-				"balanceOf": {
-					"details": "返回账户`account`所持有的代币数."
-				},
-				"totalSupply": {
-					"details": "返回代币总供给."
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -306,7 +276,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ERC20/Faucet.sol": "ERC20"
+			"contracts/ERC20/MyToken.sol": "MyToken"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -320,20 +290,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ERC20/Faucet.sol": {
-			"keccak256": "0x0200bd37d41fbf483193fdd948dd0464841f0f1bdb31f036ea5ca404abe52f20",
+		"contracts/ERC20/MyToken.sol": {
+			"keccak256": "0xd5d897e1b4b2f683eef80ae2a0e3b2710b57f85fabb5c724b6e20f80eb6cd7f1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://97e8327ee8b0e74107ce222d39c490d5e6dfc96b5203f896ac1e8e9f895429c2",
-				"dweb:/ipfs/QmZwEYVCd3F9wStRqHv27NDuvbzL51oVhH9neewdBDGKyC"
-			]
-		},
-		"contracts/ERC20/IERC20.sol": {
-			"keccak256": "0x70666f4c4cdbbebeb66d5849341b325bdc483fe93dfbc0abddf8d3cbe1bb694c",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://443619be90011012cd151a64132517da8cffaa5501f804a3ef787abc9fa3aa7b",
-				"dweb:/ipfs/QmS5R1tGx8Fc5iaXugPm6cUqjU6fPDuSpJqH1KB4qiLaoY"
+				"bzz-raw://6beace976f72fa4d8e2d91e9741a7a9714f641575d01d31bb6321bb10c2d729c",
+				"dweb:/ipfs/QmegewPdrieSpv2jLCdK7xcVYaNmCZCfsHo5w3JTEZx9kC"
 			]
 		}
 	},
