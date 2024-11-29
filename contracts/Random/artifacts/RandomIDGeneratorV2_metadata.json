@@ -1,0 +1,219 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vrfCoordinator",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "linkToken",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_keyHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint64",
+						"name": "_subscriptionId",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "have",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "want",
+						"type": "address"
+					}
+				],
+				"name": "OnlyCoordinatorCanFulfill",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "requestId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "randomId",
+						"type": "uint256"
+					}
+				],
+				"name": "RandomNumberFulfilled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "requestId",
+						"type": "uint256"
+					}
+				],
+				"name": "RandomNumberRequested",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "LINK",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountInLINK",
+						"type": "uint256"
+					}
+				],
+				"name": "fundContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLINKBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "randomId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "requestId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "randomWords",
+						"type": "uint256[]"
+					}
+				],
+				"name": "rawFulfillRandomWords",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "requestRandomID",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "requestId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Random/testR.sol": "RandomIDGeneratorV2"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol": {
+			"keccak256": "0x5a502a5ce16796565815b295bb2d18a0d26d6f23621f733918c971047c6091d7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f03385e076f6c2ad534bffe7c655cf259242e0f133f0ebfd56f914c0dde4a3f4",
+				"dweb:/ipfs/QmWkQVSoAoRu1LXQTfDeic9QESjQkjT4G5Kt1VptTaxQDP"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xe06a3f08a987af6ad2e1c1e774405d4fe08f1694b67517438b467cecf0da0ef7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://df6f0c459663c9858b6cba2cda1d14a7d05a985bed6d2de72bd8e78c25ee79db",
+				"dweb:/ipfs/QmeTTxZ7qVk9rjEv2R4CpCwdf8UMCcRqDNMvzNxHc3Fnn9"
+			]
+		},
+		"contracts/Random/testR.sol": {
+			"keccak256": "0x491fcb683330aea768adbba11872d87697ec7293ea512d32b171c088c10f098c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6195fbf9b73a909c4c5e92e2daf35a63054698e1dbd95d61e5a4f864377aac93",
+				"dweb:/ipfs/QmVA8m3p2BVmD1uSYsrU2UqXf9a6MQLBj8rQ1SZLJvaK7q"
+			]
+		}
+	},
+	"version": 1
+}
