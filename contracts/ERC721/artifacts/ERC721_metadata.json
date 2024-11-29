@@ -164,6 +164,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getInterfaceId",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -405,11 +418,11 @@
 	},
 	"sources": {
 		"contracts/ERC721/ERC721.sol": {
-			"keccak256": "0x08154c25fa3927b8bc88d0bee23b55cf1f935bef8f0040a17e31515ac8cf0739",
+			"keccak256": "0xd252668ea5490d139576036e7d0584f24d635a24e5bb003e3363d9e309b6b50e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7b629b7cc1caa0931e802ed5742abb8f3009857e9fb2630e3cfeefc9ca1a1380",
-				"dweb:/ipfs/QmRoUHFhmrFFUo1qwkG5AGFzv3HQjJEFQPzdrEyrhHmRC4"
+				"bzz-raw://797b45788e29f095ac5999eb78225a344a844679a3e658c18f153c63ca8301b6",
+				"dweb:/ipfs/Qmeso5zYDNLw92T4PuU4W9ZQV7u7BoLAxgWpyRtZz9YR21"
 			]
 		},
 		"contracts/ERC721/IERC165.sol": {

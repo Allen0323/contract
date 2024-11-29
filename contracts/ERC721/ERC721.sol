@@ -8,7 +8,7 @@ import "./IERC721Receiver.sol";
 import "./IERC721Metadata.sol";
 import "./String.sol";
 
-contract ERC721 is IERC721, IERC721Metadata{
+contract ERC721 is IERC721, IERC721Metadata {
     using Strings for uint256; // 使用Strings库，
 
     // Token名称
@@ -16,11 +16,11 @@ contract ERC721 is IERC721, IERC721Metadata{
     // Token代号
     string public override symbol;
     // tokenId 到 owner address 的持有人映射
-    mapping(uint => address) private _owners;
+    mapping(uint256 => address) private _owners;
     // address 到 持仓数量 的持仓量映射
-    mapping(address => uint) private _balances;
+    mapping(address => uint256) private _balances;
     // tokenID 到 授权地址 的授权映射
-    mapping(uint => address) private _tokenApprovals;
+    mapping(uint256 => address) private _tokenApprovals;
     // owner地址 到 operator地址 的批量授权映射
     mapping(address => mapping(address => bool)) private _operatorApprovals;
 
@@ -33,6 +33,10 @@ contract ERC721 is IERC721, IERC721Metadata{
     constructor(string memory name_, string memory symbol_) {
         name = name_;
         symbol = symbol_;
+    }
+
+    function getInterfaceId() public view returns (bytes4) {
+        return type(IERC721Receiver).interfaceId;
     }
 
     // 实现IERC165接口supportsInterface
@@ -49,13 +53,18 @@ contract ERC721 is IERC721, IERC721Metadata{
     }
 
     // 实现IERC721的balanceOf，利用_balances变量查询owner地址的balance。
-    function balanceOf(address owner) external view override returns (uint) {
+    function balanceOf(address owner) external view override returns (uint256) {
         require(owner != address(0), "owner = zero address");
         return _balances[owner];
     }
 
     // 实现IERC721的ownerOf，利用_owners变量查询tokenId的owner。
-    function ownerOf(uint tokenId) public view override returns (address owner) {
+    function ownerOf(uint256 tokenId)
+        public
+        view
+        override
+        returns (address owner)
+    {
         owner = _owners[tokenId];
         require(owner != address(0), "token doesn't exist");
     }
@@ -71,29 +80,37 @@ contract ERC721 is IERC721, IERC721Metadata{
     }
 
     // 实现IERC721的setApprovalForAll，将持有代币全部授权给operator地址。调用_setApprovalForAll函数。
-    function setApprovalForAll(address operator, bool approved) external override {
+    function setApprovalForAll(address operator, bool approved)
+        external
+        override
+    {
         _operatorApprovals[msg.sender][operator] = approved;
         emit ApprovalForAll(msg.sender, operator, approved);
     }
 
     // 实现IERC721的getApproved，利用_tokenApprovals变量查询tokenId的授权地址。
-    function getApproved(uint tokenId) external view override returns (address) {
+    function getApproved(uint256 tokenId)
+        external
+        view
+        override
+        returns (address)
+    {
         require(_owners[tokenId] != address(0), "token doesn't exist");
         return _tokenApprovals[tokenId];
     }
-     
+
     // 授权函数。通过调整_tokenApprovals来，授权 to 地址操作 tokenId，同时释放Approval事件。
     function _approve(
         address owner,
         address to,
-        uint tokenId
+        uint256 tokenId
     ) private {
         _tokenApprovals[tokenId] = to;
         emit Approval(owner, to, tokenId);
     }
 
     // 实现IERC721的approve，将tokenId授权给 to 地址。条件：to不是owner，且msg.sender是owner或授权地址。调用_approve函数。
-    function approve(address to, uint tokenId) external override {
+    function approve(address to, uint256 tokenId) external override {
         address owner = _owners[tokenId];
         require(
             msg.sender == owner || _operatorApprovals[owner][msg.sender],
@@ -106,7 +123,7 @@ contract ERC721 is IERC721, IERC721Metadata{
     function _isApprovedOrOwner(
         address owner,
         address spender,
-        uint tokenId
+        uint256 tokenId
     ) private view returns (bool) {
         return (spender == owner ||
             _tokenApprovals[tokenId] == spender ||
@@ -123,7 +140,7 @@ contract ERC721 is IERC721, IERC721Metadata{
         address owner,
         address from,
         address to,
-        uint tokenId
+        uint256 tokenId
     ) private {
         require(from == owner, "not owner");
         require(to != address(0), "transfer to the zero address");
@@ -136,12 +153,12 @@ contract ERC721 is IERC721, IERC721Metadata{
 
         emit Transfer(from, to, tokenId);
     }
-    
+
     // 实现IERC721的transferFrom，非安全转账，不建议使用。调用_transfer函数
     function transferFrom(
         address from,
         address to,
-        uint tokenId
+        uint256 tokenId
     ) external override {
         address owner = ownerOf(tokenId);
         require(
@@ -162,7 +179,7 @@ contract ERC721 is IERC721, IERC721Metadata{
         address owner,
         address from,
         address to,
-        uint tokenId,
+        uint256 tokenId,
         bytes memory _data
     ) private {
         _transfer(owner, from, to, tokenId);
@@ -175,7 +192,7 @@ contract ERC721 is IERC721, IERC721Metadata{
     function safeTransferFrom(
         address from,
         address to,
-        uint tokenId,
+        uint256 tokenId,
         bytes memory _data
     ) public override {
         address owner = ownerOf(tokenId);
@@ -190,19 +207,19 @@ contract ERC721 is IERC721, IERC721Metadata{
     function safeTransferFrom(
         address from,
         address to,
-        uint tokenId
+        uint256 tokenId
     ) external override {
         safeTransferFrom(from, to, tokenId, "");
     }
 
-    /** 
+    /**
      * 铸造函数。通过调整_balances和_owners变量来铸造tokenId并转账给 to，同时释放Transfer事件。铸造函数。通过调整_balances和_owners变量来铸造tokenId并转账给 to，同时释放Transfer事件。
      * 这个mint函数所有人都能调用，实际使用需要开发人员重写，加上一些条件。
      * 条件:
      * 1. tokenId尚不存在。
      * 2. to不是0地址.
      */
-    function _mint(address to, uint tokenId) internal virtual {
+    function _mint(address to, uint256 tokenId) internal virtual {
         require(to != address(0), "mint to zero address");
         require(_owners[tokenId] == address(0), "token already minted");
 
@@ -213,7 +230,7 @@ contract ERC721 is IERC721, IERC721Metadata{
     }
 
     // 销毁函数，通过调整_balances和_owners变量来销毁tokenId，同时释放Transfer事件。条件：tokenId存在。
-    function _burn(uint tokenId) internal virtual {
+    function _burn(uint256 tokenId) internal virtual {
         address owner = ownerOf(tokenId);
         require(msg.sender == owner, "not owner of token");
 
@@ -226,9 +243,21 @@ contract ERC721 is IERC721, IERC721Metadata{
     }
 
     // _checkOnERC721Received：函数，用于在 to 为合约的时候调用IERC721Receiver-onERC721Received, 以防 tokenId 被不小心转入黑洞。
-    function _checkOnERC721Received(address from, address to, uint256 tokenId, bytes memory data) private {
+    function _checkOnERC721Received(
+        address from,
+        address to,
+        uint256 tokenId,
+        bytes memory data
+    ) private {
         if (to.code.length > 0) {
-            try IERC721Receiver(to).onERC721Received(msg.sender, from, tokenId, data) returns (bytes4 retval) {
+            try
+                IERC721Receiver(to).onERC721Received(
+                    msg.sender,
+                    from,
+                    tokenId,
+                    data
+                )
+            returns (bytes4 retval) {
                 if (retval != IERC721Receiver.onERC721Received.selector) {
                     revert ERC721InvalidReceiver(to);
                 }
@@ -248,16 +277,25 @@ contract ERC721 is IERC721, IERC721Metadata{
     /**
      * 实现IERC721Metadata的tokenURI函数，查询metadata。
      */
-    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        virtual
+        override
+        returns (string memory)
+    {
         require(_owners[tokenId] != address(0), "Token Not Exist");
 
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
+        return
+            bytes(baseURI).length > 0
+                ? string(abi.encodePacked(baseURI, tokenId.toString()))
+                : "";
     }
 
     /**
      * 计算{tokenURI}的BaseURI，tokenURI就是把baseURI和tokenId拼接在一起，需要开发重写。
-     * BAYC的baseURI为ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/ 
+     * BAYC的baseURI为ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/
      */
     function _baseURI() internal view virtual returns (string memory) {
         return "";
