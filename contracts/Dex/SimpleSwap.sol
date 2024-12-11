@@ -30,12 +30,12 @@ contract SimpleSwap is ERC20 {
     }
 
     // 取两个数的最小值
-    function min(uint x, uint y) internal pure returns (uint z) {
+    function min(uint x, uint y) public  pure returns (uint z) {
         z = x < y ? x : y;
     }
 
     // 计算平方根 babylonian method (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
-    function sqrt(uint y) internal pure returns (uint z) {
+    function sqrt(uint y) public  pure returns (uint z) {
         if (y > 3) {
             z = y;
             uint x = y / 2 + 1;
