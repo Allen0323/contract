@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.19.2.
+ * Original file: /npm/cons@0.0.2/lib/cons.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+var exec=require("child_process").exec,path=require("path");function cons(e,c){return"/usr/bin/console",exec('/usr/bin/console "'+escape(e)+'"',c)}function escape(e){return e.replace(/"/,'\\"')}module.exports=cons;
+//# sourceMappingURL=/sm/68681f703e3a0ff7772d18b5a78cbd372e7e8fb034738d3a5a04ef48d7505ee0.map

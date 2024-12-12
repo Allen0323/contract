@@ -1,0 +1,73 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/study2/SendEth.sol": "sendETH"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/study2/SendEth.sol": {
+			"keccak256": "0x863946a404ab357f6dbaa7c4259cdd29dad28a62926b514aaf70557aee8034d4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2b2a64076763ae93fb53aa2f82ae570030883452805beff6f99202f4c660aef7",
+				"dweb:/ipfs/QmXNxgAGEUN5gUJWoxJ1z3bnazHvAWToFxTUbibhvA77ZY"
+			]
+		}
+	},
+	"version": 1
+}
