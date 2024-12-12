@@ -4,7 +4,202 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "_byte",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_byte32",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_string",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					}
+				],
+				"name": "addPure",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "new_number",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "addView",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "new_number",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enumToUint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minusCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minusPayable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "number",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"name": "redReturn",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "t1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "t2",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnMultiple",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[3]",
+						"name": "",
+						"type": "uint256[3]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnNamed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_bool",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256[3]",
+						"name": "_array",
+						"type": "uint256[3]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -18,7 +213,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/study/Storage.sol": "HelloWeb"
+			"contracts/study/MyStudyOne.sol": "HelloWeb"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,12 +227,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/study/Storage.sol": {
-			"keccak256": "0x3470df34258de580b3e4f903df49e6b283d6969c60f4b906eaa5d8220f7fdf20",
+		"contracts/study/MyStudyOne.sol": {
+			"keccak256": "0xdc05274259ed00501f8562cde06c01d4106894e966eea0bb0a4f674d593f1042",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://011a5f3201f530ac7d7cdf32018e1319a0cc26961abab07fb9c0c7a3f5737151",
-				"dweb:/ipfs/QmNp8jKnChn36gqA5kHTitEs2NrKRZCQVqmwf2P5RM6W5s"
+				"bzz-raw://8435c2d6b54c8fc323544a19630da1fa82362c38d79f043f8331af275990feed",
+				"dweb:/ipfs/Qmb5U1njRUMpjGjDXvxkpeLhQpF17n5jmZf522t1xzBFSD"
 			]
 		}
 	},

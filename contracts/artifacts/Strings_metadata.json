@@ -91,7 +91,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Library1.sol": "Strings"
+			"contracts/Library.sol": "Strings"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -105,7 +105,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Library1.sol": {
+		"contracts/Library.sol": {
 			"keccak256": "0x135e7608077c3bdefa9df9ab42e498ca9215f7956d2a47abb539002e46c18fa4",
 			"license": "MIT",
 			"urls": [
