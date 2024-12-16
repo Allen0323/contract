@@ -1,0 +1,116 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getX",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "setX",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/study2/OtherContract.sol": "OtherContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/study2/OtherContract.sol": {
+			"keccak256": "0xe585ef4f8e9f8241470faf2239fdc32ba4453a410318881d9843e873d7b3334d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cd18f3b7c134bce2cea2aaaf3c0cdf7111776b2287c07eed8c28ca6e52cc8608",
+				"dweb:/ipfs/QmdVaTiwjuE56wXFW7jatPcr4YgVCHkahcULgakyT3Mkqq"
+			]
+		},
+		"contracts/study2/String.sol": {
+			"keccak256": "0xfe06ef1d5e4b63615dad491a475fc2ee9b97c5ef2598775b9495190a174b088a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://083dc9161d06d700151a3a13a10815f090eb3f615b52692bbc2f51f98d995381",
+				"dweb:/ipfs/QmaQc2nLdyxMkdCkpoJbJiz7A7FgrbGQp4xC8hsV6yFiAe"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/study2/DeployContract2.sol": "DeleteContract2"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/study2/DeployContract2.sol": {
+			"keccak256": "0xfd6b7b6d6317aa3039b7ab03d44d7df88e5a323b14eef0802d811251fbb5eebf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://01d8ea7af01c10c69c65ed7312744aaf898805088702686b0cd1f96606569c33",
+				"dweb:/ipfs/QmSLqvTNuRmWb91Kp7RAHzuL3FtbYVnPo8vjGnQUJzBh1u"
+			]
+		}
+	},
+	"version": 1
+}

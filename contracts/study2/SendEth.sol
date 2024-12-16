@@ -16,6 +16,8 @@ contract traferETH {
 contract sendEth2 {
     error SendFailed(); // 用send发送ETH失败error
 
+    receive() external payable {}
+
     // send()发送ETH
     function sendETH(address payable _to, uint256 amount) external payable {
         // 处理下send的返回值，如果失败，revert交易并发送error
@@ -28,6 +30,8 @@ contract sendEth2 {
 
 contract callEth {
     error CallFailed(); // 用call发送ETH失败error
+
+    receive() external payable {}
 
     // call()发送ETH
     function callETH(address payable _to, uint256 amount) external payable {
