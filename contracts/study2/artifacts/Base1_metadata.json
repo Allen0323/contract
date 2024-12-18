@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/study2/InheritanceTest1.sol": "Base1"
+			"contracts/study2/InheritanceTest.sol": "Base1"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,7 +32,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/study2/InheritanceTest1.sol": {
+		"contracts/study2/InheritanceTest.sol": {
 			"keccak256": "0x3a8c032eb89da05730a7afdfb70e36c31d24da7d52416ee3e1a0ecb1d15562bf",
 			"license": "MIT",
 			"urls": [
